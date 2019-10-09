@@ -34,27 +34,32 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         view.backgroundColor = UIColor.white
         
         let layout = CustomLayout()
-        //let layout = UICollectionViewFlowLayout()
-        let frame = CGRect(x:0, y:20, width: view.bounds.size.width,
-                           height:view.bounds.height-20)
+        let frame = CGRect(x:0, y:20, width: view.bounds.size.width,height:view.bounds.height-20)
         self.collectionView = UICollectionView(frame: frame, collectionViewLayout:layout)
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         // 注册CollectionViewCell
-        self.collectionView.register(UICollectionViewCell.self,
-                                     forCellWithReuseIdentifier: "ViewCell")
+        self.collectionView.register(UICollectionViewCell.self,forCellWithReuseIdentifier: "ViewCell")
         //默认背景是黑色和label一致
         self.collectionView.backgroundColor = UIColor.white
         
         //设置collectionView的内边距
-        self.collectionView.contentInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        self.collectionView.contentInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         
         self.view.addSubview(collectionView)
-        view.addSubview(collectionView)
+        
+        let rightBarButton = UIBarButtonItem(title: "fiist", style: .plain, target: self, action: #selector(nextButtonClick))
+        navigationItem.rightBarButtonItem = rightBarButton
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    @objc func nextButtonClick() {
+        let first = FirstViewController()
+        first.title = "first"
+        navigationController?.pushViewController(first, animated: false)
     }
 }
 
@@ -67,8 +72,7 @@ extension ViewController {
         // storyboard里设计的单元格
         let identify:String = "ViewCell"
         // 获取设计的单元格，不需要再动态添加界面元素
-        let cell = self.collectionView.dequeueReusableCell(
-            withReuseIdentifier: identify, for: indexPath) as UICollectionViewCell
+        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: identify, for: indexPath) as UICollectionViewCell
         //先清空内部原有的元素
         for subview in cell.subviews {
             subview.removeFromSuperview()
@@ -88,49 +92,11 @@ extension ViewController {
         return cell
     }
     
-//    // 有幾個 section
-//    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-//        return 2
-//    }
-    
-    // 點選 cell 後執行的動作
-    func collectionView(collectionView: UICollectionView,didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        print("你選擇了第 \(indexPath.section + 1) 組的")
-        print("第 \(indexPath.item + 1) 張圖片")
+    //点击cell后的触发事件
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("NO. \(indexPath.section + 1) section is selected")
+        print("NO. \(indexPath.item + 1) pic is selected")
+        
     }
     
-//    // 設置 reuse 的 section 的 header 或 footer
-//    func collectionView(collectionView: UICollectionView,viewForSupplementaryElementOfKind kind: String,atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
-//        // 建立 UICollectionReusableView
-//        var reusableView = UICollectionReusableView()
-//
-//        // 顯示文字
-//        let label = UILabel(frame: CGRect(x: 0, y: 0,width: SCALE_WIDTH, height: 40))
-//        label.textAlignment = .center
-//
-//        // header
-//        if kind == UICollectionView.elementKindSectionHeader {
-//            // 依據前面註冊設置的識別名稱 "Header" 取得目前使用的 header
-//            reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,withReuseIdentifier: "Header",for: indexPath as IndexPath)
-//            // 設置 header 的內容
-//            reusableView.backgroundColor = UIColor.darkGray
-//            label.text = "Header";
-//            label.textColor = UIColor.white
-//
-//        } else if kind ==
-//            UICollectionView.elementKindSectionFooter {
-//            // 依據前面註冊設置的識別名稱 "Footer" 取得目前使用的 footer
-//            reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter,withReuseIdentifier: "Footer",for: indexPath as IndexPath)
-//            // 設置 footer 的內容
-//            reusableView.backgroundColor = UIColor.cyan
-//            label.text = "Footer";
-//            label.textColor = UIColor.black
-//
-//        }
-//
-//        reusableView.addSubview(label)
-//        return reusableView
-//    }
-    
-
 }

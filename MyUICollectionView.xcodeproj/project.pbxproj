@@ -24,6 +24,11 @@
 		97AF3C7D234D7F3800ADC688 /* xcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 97AF3C74234D7F3800ADC688 /* xcode.png */; };
 		97AF3C7E234D7F3800ADC688 /* html.png in Resources */ = {isa = PBXBuildFile; fileRef = 97AF3C75234D7F3800ADC688 /* html.png */; };
 		97AF3C80234D7F8D00ADC688 /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AF3C7F234D7F8D00ADC688 /* CustomLayout.swift */; };
+		97AF3C82234D85A900ADC688 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AF3C81234D85A900ADC688 /* FirstViewController.swift */; };
+		97AF3C87234D880E00ADC688 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97AF3C83234D880E00ADC688 /* 02.jpg */; };
+		97AF3C88234D880E00ADC688 /* 03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97AF3C84234D880E00ADC688 /* 03.jpg */; };
+		97AF3C89234D880E00ADC688 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97AF3C85234D880E00ADC688 /* 01.jpg */; };
+		97AF3C8A234D880E00ADC688 /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97AF3C86234D880E00ADC688 /* 04.jpg */; };
 		F625D283CCEE433232A1068A /* Pods_MyUICollectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF47A7139D03E1094BB9CAF /* Pods_MyUICollectionView.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +54,11 @@
 		97AF3C74234D7F3800ADC688 /* xcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xcode.png; sourceTree = "<group>"; };
 		97AF3C75234D7F3800ADC688 /* html.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = html.png; sourceTree = "<group>"; };
 		97AF3C7F234D7F8D00ADC688 /* CustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
+		97AF3C81234D85A900ADC688 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		97AF3C83234D880E00ADC688 /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
+		97AF3C84234D880E00ADC688 /* 03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03.jpg; sourceTree = "<group>"; };
+		97AF3C85234D880E00ADC688 /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
+		97AF3C86234D880E00ADC688 /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
 		9DFB78CB7DF061ECBB7F2D63 /* Pods-MyUICollectionView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyUICollectionView.debug.xcconfig"; path = "Target Support Files/Pods-MyUICollectionView/Pods-MyUICollectionView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,8 +107,13 @@
 				97AF3C4D234D660F00ADC688 /* AppDelegate.swift */,
 				97AF3C60234D6C3900ADC688 /* AppGlobal.swift */,
 				97AF3C4F234D660F00ADC688 /* ViewController.swift */,
+				97AF3C81234D85A900ADC688 /* FirstViewController.swift */,
 				97AF3C62234D6E0900ADC688 /* MyUIColletionViewCell.swift */,
 				97AF3C7F234D7F8D00ADC688 /* CustomLayout.swift */,
+				97AF3C85234D880E00ADC688 /* 01.jpg */,
+				97AF3C83234D880E00ADC688 /* 02.jpg */,
+				97AF3C84234D880E00ADC688 /* 03.jpg */,
+				97AF3C86234D880E00ADC688 /* 04.jpg */,
 				97AF3C73234D7F3800ADC688 /* c#.png */,
 				97AF3C75234D7F3800ADC688 /* html.png */,
 				97AF3C71234D7F3800ADC688 /* java.png */,
@@ -192,12 +207,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97AF3C88234D880E00ADC688 /* 03.jpg in Resources */,
+				97AF3C87234D880E00ADC688 /* 02.jpg in Resources */,
 				97AF3C77234D7F3800ADC688 /* js.png in Resources */,
 				97AF3C7B234D7F3800ADC688 /* swift.png in Resources */,
 				97AF3C78234D7F3800ADC688 /* react.png in Resources */,
+				97AF3C89234D880E00ADC688 /* 01.jpg in Resources */,
 				97AF3C58234D661000ADC688 /* LaunchScreen.storyboard in Resources */,
 				97AF3C76234D7F3800ADC688 /* ruby.png in Resources */,
 				97AF3C7C234D7F3800ADC688 /* c#.png in Resources */,
+				97AF3C8A234D880E00ADC688 /* 04.jpg in Resources */,
 				97AF3C55234D661000ADC688 /* Assets.xcassets in Resources */,
 				97AF3C7A234D7F3800ADC688 /* java.png in Resources */,
 				97AF3C7E234D7F3800ADC688 /* html.png in Resources */,
@@ -259,6 +278,7 @@
 				97AF3C50234D660F00ADC688 /* ViewController.swift in Sources */,
 				97AF3C80234D7F8D00ADC688 /* CustomLayout.swift in Sources */,
 				97AF3C4E234D660F00ADC688 /* AppDelegate.swift in Sources */,
+				97AF3C82234D85A900ADC688 /* FirstViewController.swift in Sources */,
 				97AF3C63234D6E0900ADC688 /* MyUIColletionViewCell.swift in Sources */,
 				97AF3C61234D6C3900ADC688 /* AppGlobal.swift in Sources */,
 			);
